@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Все машины</title>
+</head>
+<body>
+<div th:each="car : ${cars}">
+    <a th:href="@{/cars/{id}(id=${car.id})}" th:text="${car.model}"></a>
+</div>
+</body>
+</html>
